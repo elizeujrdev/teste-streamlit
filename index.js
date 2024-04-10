@@ -15,7 +15,8 @@ async function start() {
 
         await delay(1000);
 
-        await driver.findElement(By.id("number_input_1")).sendKeys('0');
+        //acrescenta o caractere no fim do número já setado por padrão
+        await driver.findElement(By.id("number_input_1")).sendKeys('0'); 
         await driver.findElement(By.id("number_input_2")).sendKeys('');
         await driver.findElement(By.id("number_input_3")).sendKeys('0');
         await driver.findElement(By.xpath('//*[@id="root"]/div[1]/div[1]/div/div/div/section/div[1]')).click();
@@ -42,6 +43,7 @@ async function start() {
 
         await delay(1000);
 
+        //acrescenta o caractere "-" no ínicio de Principal Amount
         await driver.findElement(By.id("number_input_1")).sendKeys(Key.HOME);
         await driver.findElement(By.id("number_input_1")).sendKeys('-');
         await driver.findElement(By.id("number_input_2")).sendKeys('');
